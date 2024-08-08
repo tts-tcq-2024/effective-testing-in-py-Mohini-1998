@@ -1,3 +1,9 @@
+MAJOR_COLORS = ['White', 'Red', 'Black', 'Yellow', 'Violet']
+MINOR_COLORS = ["Blue", "Orange", "Green", "Brown", "Slate"]
+table=[]
+i=0
+
+from unittest.mock import patch, Mock
 
 def print_color_map():
     major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
@@ -8,6 +14,19 @@ def print_color_map():
     return len(major_colors) * len(minor_colors)
 
 
+def create_colour_code_table():
+    pair_number=1
+    row=[]
+    for major_colour in MAJOR_COLORS:
+        for minor_colour in MINOR_COLORS:
+            row.append(pair_number)
+            row.append(major_colour)
+            row.append(minor_colour)
+            table.append(row)
+            pair_number+=1
+            row=[]
+
 result = print_color_map()
-assert(result == 25)
+# fake_print_colour_map()
+assert(result == 24)
 print("All is well (maybe!)\n")
