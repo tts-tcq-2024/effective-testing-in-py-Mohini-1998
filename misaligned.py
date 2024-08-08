@@ -1,4 +1,3 @@
-
 MAJOR_COLORS = ['White', 'Red', 'Black', 'Yellow', 'Violet']
 MINOR_COLORS = ["Blue", "Orange", "Green", "Brown", "Slate"]
 table=[]
@@ -14,6 +13,19 @@ def print_color_map():
             print(f'{i * 5 + j} | {major} | {minor}')
     return len(major_colors) * len(minor_colors)
 
+# @patch("builtins.print")
+# def fake_print_colour_map(mock_print):
+#     for i, major in enumerate(major_colors):
+#         for j, minor in enumerate(minor_colors):
+#             print(f'{i * 5 + j} | {major} | {minor}')
+#             mock_print.assert_called_with()
+        
+    
+# def fake_print_colour_map():
+#     mock = Mock()
+#     for i, major in enumerate(major_colors):
+#         for j, minor in enumerate(minor_colors):
+#             print(f'{i * 5 + j} | {major} | {minor}')
 
 def create_colour_code_table():
     pair_number=1
